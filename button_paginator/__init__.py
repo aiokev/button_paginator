@@ -211,9 +211,9 @@ class Paginator(discord.ui.View):
             if self.attachments:
                 current_attachment = self.attachments[self.page]
                 if isinstance(current, str):
-                    self.message = await self.destination.reply(content=current,embed=None, view=self, file=current_attachment, mention_author=False)
+                    self.message = await self.destination.send(content=current,embed=None, view=self, file=current_attachment)
                 elif isinstance(current, discord.Embed):
-                    self.message = await self.destination.reply(content=None, embed=current, view=self, file=current_attachment, mention_author=False)
+                    self.message = await self.destination.send(content=None, embed=current, view=self, file=current_attachment)
                 elif isinstance(current, tuple):
                     dct = {}
                     for item in current:
