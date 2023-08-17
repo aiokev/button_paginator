@@ -151,7 +151,7 @@ class Paginator(discord.ui.View):
         interactionfailed=None
         check=None
         defer=True
-        if error_emoji == None: self.emoji="⚠️"
+        if error_emoji == None: self.emoji="<:warning:1139953246388092998>"
         else: self.emoji=error_emoji
         if error_color == None: self.color=int("F4DB6D", 16)
         else: self.color=int(error_color, 16)
@@ -245,7 +245,7 @@ class Paginator(discord.ui.View):
             pass
         else:
             if interaction.user.id != self.invoker:
-                return await interaction.response.send_message(ephemeral=True, embed=discord.Embed(description=f"{emoji} {interaction.user.mention}: **You aren't the author of this embed**", color=self.color))
+                return await interaction.response.send_message(ephemeral=True, embed=discord.Embed(description=f"{emoji} {interaction.user.mention}: You're not the **author** of this embed!", color=self.color))
             else:
                 #await interaction.response.defer()
                 pass
