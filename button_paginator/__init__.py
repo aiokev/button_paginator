@@ -151,7 +151,7 @@ class Paginator(discord.ui.View):
         interactionfailed=None
         check=None
         defer=True
-        if error_emoji == None: self.emoji="<:warning:1139953246388092998>"
+        if error_emoji == None: self.emoji=":warning:"
         else: self.emoji=error_emoji
         if error_color == None: self.color=int("F4DB6D", 16)
         else: self.color=int(error_color, 16)
