@@ -245,7 +245,7 @@ class Paginator(discord.ui.View):
             pass
         else:
             if interaction.user.id != self.invoker:
-                return await interaction.response.send_message(ephemeral=True, embed=discord.Embed(description=f"{emoji} {interaction.user.mention}: You're not the **author** of this embed!", color=self.color))
+                return await interaction.response.send_message(ephemeral=True, content="You're not the **author** of this embed!")
             else:
                 #await interaction.response.defer()
                 pass
