@@ -10,8 +10,8 @@ setup(
     description="A module which allows easy implementation of button pagination",
     long_description=desc,
     long_description_content_type="text/markdown",
-    author="keptz",
-    url="https://github.com/keptz/button_paginator",
+    author="aiokev",
+    url="https://github.com/aiokev/button_paginator",
     python_requires=">=3.6",
     packages=find_packages(include=["button_paginator", "button_paginator.*"]),
 )
